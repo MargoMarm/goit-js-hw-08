@@ -41,7 +41,7 @@ function onImageClick(event) {
 	
   galletyRef.addEventListener("keydown", (event) => {
     if (event.code === "Escape") {
-      instance.close();
+      lightbox.close();
     }
   });
 }

@@ -16,7 +16,7 @@ function setLocalStorageData(event) {
 	localStorage.setItem(FORM_KEY, JSON.stringify(formData))
 };
 
-function populateForm(event) {
+function populateForm() {
 	const savedData = localStorage.getItem(FORM_KEY);
 	const parsedSavedData = JSON.parse(savedData);
 
@@ -32,7 +32,13 @@ function populateForm(event) {
 }
 
 function onSubmit(event) {
-	event.preventDefault();
+		event.preventDefault();
+
+	if (formRef.value === '' || inputRef.value === '') {
+		alert('Звповніть всі поля!')
+		return;
+	}
+
 
 	console.log(formData);
 
