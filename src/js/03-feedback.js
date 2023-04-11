@@ -34,7 +34,7 @@ function populateForm() {
 function onSubmit(event) {
 		event.preventDefault();
 
-	if (formRef.value === '' || inputRef.value === '') {
+	if (!formData.email || !formData.message || formData.email.trim() === '' || formData.message.trim() === '') {
 		alert('Звповніть всі поля!')
 		return;
 	}
